@@ -16,6 +16,10 @@ public class ContaBancaria {
         return saldo;
     }
 
+    public String getNumeroConta() {
+        return numeroConta;
+    }
+
     public void sacar(double valor) throws Exception {
         if (valor > saldo) {
             throw new Exception("Saldo insuficiente");

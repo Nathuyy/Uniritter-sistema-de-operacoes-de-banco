@@ -6,6 +6,10 @@ public class ContaCorrente extends ContaBancaria{
         this.limite = limite;
     }
 
+    public double exibirSaldo(){
+        return saldo;
+    }
+
     @Override
     public void sacar(double valor) throws Exception {
         if (valor > saldo + limite) {

@@ -10,12 +10,12 @@ public class Banco {
 
     public void adicionarConta(ContaBancaria conta) {
         contas.add(conta);
-        System.out.printf("Conta %d adicionada com sucesso.\n", conta.numero);
+        System.out.printf("Conta %d adicionada com sucesso.\n", conta.getNumeroConta());
     }
 
     public ContaBancaria encontrarConta(int numero) {
         for (ContaBancaria conta : contas) {
-            if (conta.numero == numero) {
+            if (conta.getNumeroConta().equals(numero)) {
                 return conta;
             }
         }

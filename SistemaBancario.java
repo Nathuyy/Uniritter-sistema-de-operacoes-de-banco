@@ -3,7 +3,7 @@ public class SistemaBancario {
         Banco banco = new Banco();
 
         //cria a conta
-        ContaCorrente conta1 = new ContaCorrente(0, "Pessoa1", 0, 0);
+        ContaCorrente conta1 = new ContaCorrente("000", 00, 0);
         ContaPoupanca conta2 = new ContaPoupanca(0, "Pessoa2", 0);
 
         //add a conta no banco
