@@ -1,5 +1,3 @@
-package Aula15;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,12 +21,12 @@ public class ContaBancaria {
             throw new Exception("Saldo insuficiente");
         }
         saldo -= valor;
-        extrato.add("Saque: R$" + valor);
+        extrato.add("Saque: -R$" + valor);
     }
 
     public void depositar(double valor) {
         saldo += valor;
-        extrato.add("Depósito: R$"+ valor);
+        extrato.add("Depósito: +R$" + valor);
     }
 
     public void transferir(double valor, ContaBancaria contaDestino) throws Exception {
@@ -37,7 +35,7 @@ public class ContaBancaria {
         }
         saldo -= valor;
         contaDestino.depositar(valor);
-        extrato.add("Transferido para " + contaDestino.numeroConta + ": -R$" + valor);
+        extrato.add("Transferência para " + contaDestino.numeroConta + ": -R$" + valor);
         contaDestino.extrato.add("Transferência recebida de " + numeroConta + ": +R$" + valor);
     }
 
@@ -46,12 +44,10 @@ public class ContaBancaria {
             throw new Exception("Saldo insuficiente");
         }
         saldo -= valor;
-        extrato.add("Pagamento de R$" + valor);
-
+        extrato.add("Pagamento de conta: -R$" + valor);
     }
 
     public List<String> consultarExtrato() {
         return extrato;
     }
-
 }
