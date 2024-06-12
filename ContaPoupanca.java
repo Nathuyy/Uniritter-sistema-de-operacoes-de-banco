@@ -1,10 +1,9 @@
 public class ContaPoupanca extends ContaBancaria {
-    public ContaPoupanca(int numero, String titular, double Saldo) {
-        super(titular, Saldo);
+    public ContaPoupanca(int numero, String titular, double saldo) {
+        super(titular, saldo);
     }
 
-    public void exibirSaldo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'exibirSaldo'");
-    }
+    public double exibirSaldo() {
+        return saldo;
+}
 }

@@ -10,7 +10,7 @@ public class Banco {
 
     public void adicionarConta(ContaBancaria conta) {
         contas.add(conta);
-        System.out.printf("Conta %d adicionada com sucesso.\n", conta.getNumeroConta());
+        System.out.printf("Conta %s adicionada com sucesso.\n", conta.getNumeroConta());
     }
 
     public ContaBancaria encontrarConta(int numero) {
